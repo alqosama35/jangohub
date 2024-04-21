@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Information</title>
+  <link rel="stylesheet" href="styles.css"> </head>
+<h1 align="center"><font size="7" color="#FFFFFF">Contact us page</font></h1>
+<body bgcolor="#3333FF">
+  <div class="image-container">
+    <div class="round-image" onclick="displayInfo('Ismail Ahmed Fawzy Abdelhamed Elmasry', '20230081', 'Student at Helwan University for Computer Science and AI')">
+      <img src="pictures/Ismail%20Ahmed.jpg" alt="Image 1">
+    </div> 
+    
+    <div class="round-image" onclick="displayInfo('Osama Abdullah Ahmed Mohammed', '20230073', 'Student at Helwan University for Computer Science and AI')">
+      <img src="pictures/Osama%20Abdullah.jpg" alt="Image 2" >
+    </div>
+    <div class="round-image" onclick="displayInfo('Osama', '20230081', 'Student at Helwan University for Computer Science and AI')">
+    <img src="pictures/Osama.jpg" alt="image 3" >
+    </div>  
+  </div> 
+	<div class="image-container2">
+	<div class="round-image" onclick="displayInfo('Galal hussein galal ali matter', '20230144', 'Student at Helwan University for Computer Science and AI')">
+	<img src="pictures/Galal.jpg" alt="image 4" ></div>
+	<div class="round-image" onclick="displayInfo('Beshoy Saeed kamel', '20230136', 'Student at Helwan University for Computer Science and AI')">
+	<img src="pictures/beshoy.jpg">
+	</div>
+	<div class="round-image" onclick="displayInfo('Ayman mohamed abd el mohsen mohamed', '20230114', 'Student at Helwan University for Computer Science and AI')">
+	<img src="pictures/Ayman.jpg">
+		</div>
+		</div>
+  <div id="info-container" class="hidden">
+    <p id="image-info"></p>
+  </div>
+
+  <script src="function.js"></script> 
+</body>
+</html>

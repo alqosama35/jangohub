@@ -1,0 +1,36 @@
+body {
+  color: white; /* Set the color of all text to white */
+}
+
+h1 {
+  color: white; /* Set the color of h1 text to white */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container2 {
+  display: flex;
+  justify-content: center;
+}
+
+.round-image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 100px;
+  align-items: center;
+}
+
+.round-image:last-child {
+  margin-right: 0; /* Remove margin from the last image */
+}
+
+.round-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
