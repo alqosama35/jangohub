@@ -50,14 +50,13 @@ body {
   margin-right: 150px;
   margin-top: 25px;
   align-items: center;
-  box-shadow: 30px 2px 8px rgba(0, 0, 0, 0.416); /* Adjusted shadow */
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  box-shadow: 30px 2px 8px rgba(0, 0, 0, 0.416);
+  transition: transform 0.3s ease; 
 }
 
 .round-image:hover {
-  transform: scale(1.1); /* Enlarge the image on hover */
+  transform: scale(1.1);
 }
-
 
 .round-image:last-child {
   margin-right: 0; 
