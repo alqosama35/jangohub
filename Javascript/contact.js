@@ -6,20 +6,15 @@ function displayInfo(name, code, job) {
                        "<strong>Code:</strong> " + code + "<br>" +
                        "<strong>Job:</strong> " + job;
 
- 
   infoContainer.classList.remove("hidden");
 }
 
-
-window.addEventListener("click", function(event) {
+document.addEventListener("click", function(event) {
   var infoContainer = document.getElementById("info-container");
+  var container = document.getElementById("content");
+
   if (!infoContainer.contains(event.target)) {
     infoContainer.classList.add("hidden");
+    container.classList.remove("centered");
   }
-
-var container = document.getElementById("content");
-
-
-container.classList.add("centered");
-
 });
