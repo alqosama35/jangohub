@@ -22,7 +22,7 @@ header ul {
    margin: 0px;
    height: var(--head-height);
    list-style: none;
-   background-color: #00a2ff;
+   background-color: #193AFF;
    justify-content: space-between;
    align-items: center;
    position: fixed;
@@ -74,13 +74,14 @@ header ul a {
    font-size: 20px;
 }
 .logo {
-   background-color: rgb(255, 150, 3);
+   background-color: #FFC819;
    height: var(--head-height);
    padding-top: 10px;
    width: 90px;
-   color: rgb(0, 0, 0);
-   font-size: 20px;
+   color:#193AFF;
+   font-size: 22px;
    text-align: center;
+   font-weight: bolder;
 }
 
 .logout a {
@@ -96,7 +97,7 @@ header ul a {
    top: calc(var(--head-height) + var(--nav-height));
    width: 100%;
    height: calc(100% - (var(--head-height) + var(--nav-height)));
-   background-image: linear-gradient(#9CECFB,#65C7F7,#0052D4);             
+   background-image: linear-gradient(#4356BF,#193AFF,#4D5480);             
 }
 .courses div div {
    display: inline-block;
@@ -120,7 +121,7 @@ header ul a {
 
 .incourse a {
    text-decoration: none;
-   background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
+   background-image: linear-gradient(to right, #FFC819, #AA934A);
    width: 70%;
    height: 70%;
    display: flex;
