@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'roboto slab';
+    src: url(../fonts/RobotoSlab-VariableFont_wght.ttf) format('truetype');
+}
+body {
+    font-family: 'roboto slab';
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+/* Hide the container by default */
+.slide {
+    display: none;
+  }
+  .x{
+    display: none;
+  }
+  
+  /* Show the container when it has the 'active' class */
+  .active {
+    display: block;
+    z-index: 1;
+  }
+.slide{
+    position: absolute;
+    position: fixed;
+
+    width: 200px;
+    height: 100%;
+    background-color: #0080ff;
+    color: aliceblue;
+    /* border-radius: 5px; */
+    margin: 0;
+    left: 0;
+    z-index: 120;
+}
+.icon i{
+    font-size: 30px;
+    padding: 5px;
+    color: aliceblue;
+    
+}
+.icon{
+    position: absolute;
+    width: fit-content;
+    z-index: 1;
+}
+.icon:hover{
+    border: solid blanchedalmond;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.x{
+    
+    position: absolute;
+    left: 150px;
+    font-size: 20px;
+    color: aliceblue;
+    z-index: 2;
+}
+.slide .container{
+    display: none;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    width: 95%;
+
+}
+.menu h3{
+    font-size: 30px;
+    font-weight: bold;
+    /* margin: 0 10px 0; */
+    margin: 10px 10px 18px 25px ;
+}
+
+.list ul{
+    list-style: none;
+    padding: 0px;
+    margin-top: 0;
+    font-size: 20px;
+}
+.list li {
+    width: 100%;
+    /* margin: 0px; */
+    /* margin-right: 5px; */
+    /* padding: 14px 2px 10px 1px; */
+    padding: 13px 10px;
+    margin-left: 10px;
+    
+    box-shadow: .1px;
+}
+.list li:hover{
+    background-color: #ffb581;
+    cursor: pointer;
+    border-radius: 5px;
+    color: black;
+}
+

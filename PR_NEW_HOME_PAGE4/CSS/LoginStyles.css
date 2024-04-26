@@ -1,0 +1,192 @@
+:root {
+   --transition: 0.2s;
+}
+body {
+   padding: 0px;
+   margin: 0px;
+   background-color: #fdfdfd;
+   height: 1600px;
+   position: relative;
+}
+
+header {
+   display: flex;
+   height: var(--height);
+   background-color: white;
+   position: fixed;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   --height: 70px;
+   box-shadow: 0px 10px 20px #e6e6e6; 
+   z-index: 100;
+}
+ul {
+   list-style: none;
+   display: flex;
+}
+.logo {
+   width: 100px; height: var(--height);
+   background-color: #376db3;
+   text-align: center; color: rgb(255, 208, 1);
+   letter-spacing: 3px;
+   font-size: 23px;
+   font-weight: 700;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+ul {
+   margin-right: 100px;
+}
+p {
+   margin-top: 18px;
+}
+ul li {
+   margin: 0px 10px;
+   font-family: Arial;
+}
+ul a {
+   text-decoration: none;
+   font-size: 25px; color: #1a4b8b;
+   transition: var(--transition);
+}
+header ul a:hover {
+   color: red;
+}
+.login {
+   background-color: #c7efff;
+   padding: 15px 10px;
+   text-align: center;
+   margin:auto 0px auto 20px;
+   border-radius: 12px;
+   font-size: 20px;
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+   min-width: 150px;
+
+}
+.logform {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   height: 370px;
+   background-color: white;
+   position: absolute;
+   top: 150px;
+   left: 25%;
+   border-radius: 15px;
+   box-shadow: -10px 18px 20px #dbdbdb , 10px 18px 20px #dbdbdb;
+   align-items: center;
+   padding-top: 40px;
+   border: 1px solid #dbdbdb;
+}
+input {
+   width: 80%;
+   padding: 20px;
+   margin: 10px 0px;
+   background-color: #eeeeee;
+   border: none;
+   outline: none;
+   border-radius: 10px;
+   font-size: 15px;
+   
+}
+.submet {
+   width: 45%;
+   padding: 13px;
+   background-color: red;
+   border-radius: 25px;
+   margin-bottom: 30px;
+   color: white;
+   font-size: 20px; font-weight: 600;
+   transition: var(--transition);
+}
+
+.submet:hover {
+   cursor: pointer;
+   background-color: rgba(255, 0, 0, 0.6);
+}
+.newac {
+   text-decoration: none;
+   color: #1a4b8b;
+   font-size: 20px;
+}
+img {
+   position: absolute;
+   bottom: 0px;
+   height: 380px;
+   /* width: 100%; */
+}
+.contact {
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
+   height: 300px;
+   background-color: rgba(131, 255, 224, 0.2);
+}
+.face p {
+   z-index: 100;
+   font-size: 30px;
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   position: absolute;
+   right: 50px;
+   border-radius: 50%;
+   border: 1px solid black;
+   background-color: black;
+   color: white;
+
+}
+.about {
+   width: 100%;
+   height: 400px;
+   /* margin-top: 50px; */
+   background-color: #EEEEEE;
+   position: absolute;
+   bottom: 350px;
+  
+}
+.flag {
+   position: absolute;
+   width: 100%;
+   height: 10px;
+   /* background-color: black; */
+   bottom: 900px;
+   
+
+}
+.contact span {
+   padding: 10px; margin-top: 20px;
+   background-color: black;
+   position: absolute;
+   right: 50px;
+   color: rgb(255, 255, 255);
+   font-size: 15px;
+   border-top-right-radius: 10px ;
+   border-bottom-right-radius: 10px ;
+   letter-spacing: 1.5px;
+ 
+}
+.contact span::before {
+   content: "f";
+   font-size: large;
+   font-weight: 500;
+   position: absolute;
+   width: 25px;
+   height: 100%;
+   background-color: rgb(0, 132, 255);
+   left: -20px; top: 0px;
+   z-index: 120;
+   color: rgb(255, 255, 255);
+   border-top-left-radius: 10px ;
+   border-bottom-left-radius: 10px ;
+   box-sizing: border-box;
+   padding: 10px;
+}
+.watsapp span {
+   margin-top: 90px;
+   background-color: green;
+   text-align: center;
+   letter-spacing: 1.5px;
+}
