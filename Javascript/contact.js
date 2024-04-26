@@ -8,3 +8,11 @@ function displayInfo(name, code, job) {
 
   infoContainer.classList.remove("hidden");
 };
+document.getElementById("theme").addEventListener("click", function() {
+  var currentCSS = document.getElementById("css-link").getAttribute("href");
+  if (currentCSS === "CSS/contact light.css") {
+      document.getElementById("css-link").setAttribute("href", "CSS/contact dark.css");
+  } else {
+      document.getElementById("css-link").setAttribute("href", "CSS/contact light.css");
+  }
+});
