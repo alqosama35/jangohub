@@ -9,4 +9,7 @@
     --black:#000000;
   }
 
-
+  @font-face {
+    font-family: robot slab;
+    src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+}

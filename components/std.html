@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <!--home css file-->
-    <link rel="stylesheet" href="CSS/home.css">
-    <!--font awsome css-->
-    <link rel="stylesheet" href="CSS/all.css">
-    <!--standard css-->
-    <link rel="stylesheet" href="CSS/standard.css">
+    <title>std</title>
+    <link rel="stylesheet" href="">
 </head>
-
 <body>
     <div class="std-top">
         <!-- list menu -->
     <div class="slide_menu">
-        
-       
+        <div class="icon" id="list_icon">
+           <i class="fa-solid fa-list"></i>
+       </div>
+       <div class="icon x" id="list_xicon">
+           <i class="fa-solid fa-xmark"></i>
+       </div>
        <div class="slide" id="slide">
            
            <div class="container">
@@ -25,9 +23,6 @@
                <div class="menu">
                    <h3>menu</h3>
                </div>
-               <div class="icon x" id="list_xicon">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
                <div class="list">
                    <ul>
                        <a href=""><li>Home</li></a>
@@ -43,71 +38,20 @@
                </div>
            </div>
        </div>
-       
+       <script src="JS/slide.js"></script>
      </div>
      <!--header-->
      <header>
         <ul>
-            <div class="icon" id="list_icon">
-                <i class="fa-solid fa-list"></i>
-            </div>
            <li class="logout"><a href="project.html">Log out</a></li>
            <li><a href="#">Home</a></li>
            <li><a href="#">Contact</a></li>
            <li class="logo">Jungo</li>
         </ul> 
      </header>
-     <script src="JS/slide.js"></script>
     </div>
-
-
-    <div class="main">
-        <div class="container">
-            <h1>Jungo Hub</h1>
-        <p>This website is the hub for all university information</p>
-        <div class="btn">
-            <a href=""><button>SignIn</button></a>
-            <a href=""><button>SignUp</button></a>
-        </div>
-        </div>
-        
-    </div>
-    <div class="courses">
-        <div class="container">
-            <h3>You Have 6 Courses this term</h3>
-            <h4>Are you Ready to check them?</h4>
-            <a href=""><button>Go To Courses</button></a>
-        </div>
-    </div>
-    <div class="features">
-        <div class="container">
-            <div class="sec">
-                <i class="fa-solid fa-plug"></i>
-                <h3>Easy to use</h3>
-                <p>You can easily navigate in the website and go to courses and download the material of all courses.</p>
-            </div>
-            <div class="sec">
-                <i class="fa-solid fa-rotate"></i>
-                <h3>Up To Date</h3>
-                <p>There is admins uploading all the information on the website and update it every day.</p>
-            </div>
-            <div class="sec">
-                <i class="fa-solid fa-folder-open"></i>
-                <h3>All In One</h3>
-                <p>This is managing all your matarial for university courses, with all the news and assignments.</p>
-            </div>
-        </div>
-    </div>
-    <div class="use">
-        <div class="container">
-            <div class="text">
-                <h3>How to use the website</h3>
-                <p>This video introduce all the features in the website and how to use them.</p>
-            </div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hopq0lq-qu4?si=4EnbJrzhAwRGecBp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-    <hr>
+    <!---------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------->
     <div class="bottom">
         <div class="container">
             <div class="sec">
@@ -158,6 +102,5 @@
             </div>
         </div>
     </div>
-    
 </body>
 </html>

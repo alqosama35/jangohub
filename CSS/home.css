@@ -101,8 +101,7 @@ body{
 .courses button:hover{
     background-color: var(--color3);
     color: var(--color2);
-    width: 205px;
-    height: 55px;
+    transform:scale(1.15);
     cursor: pointer;
 }
 /*features section*/
