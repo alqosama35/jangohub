@@ -3,6 +3,9 @@ p{
  color: #AA934A;
  font-size: 18pt;
 }
+button{
+  top: 1;
+}
 h1{
   font-family: myfont;
   text-align: center;
@@ -25,6 +28,8 @@ h2{
 
 body {
   margin: 0;
+  margin-top: 100px;
+  margin-bottom: 50px;
   padding-bottom: 215px;
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom,#193AFF,#4356BF); 

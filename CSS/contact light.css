@@ -1,42 +1,51 @@
+@font-face {
+  font-family: 'roboto slab';
+  src: url(../fonts/RobotoSlab-VariableFont_wght.ttf) format('truetype');
+}
 p{
   text-align: left;
   color: #4356BF;
   font-size: 18pt;
  }
+ 
  h1{
-   font-family: myfont;
+  font-family: 'roboto slab';
    text-align: center;
    color: #193AFF ;
    font-size: 40pt;
-   margin-top: 30px;
+   margin-top: 20px;
  }
+
  h2{
-   font-family: myfont;
+  font-family: 'roboto slab';
    font-size: 21pt;  
    color: #193AFF;
    text-alrgb(151, 97, 17)
  }
+
  .border{
    border-style: double;
    border: 2px solid black;
    border-radius: 12px;
    padding: 5px;
  }
- 
+
  body {
+  font-family: 'roboto slab';
    margin: 0;
+   margin-top: 100px;
+   margin-bottom: 100px;
    padding-bottom: 215px;
    font-family: Arial, sans-serif;
    background: linear-gradient(to bottom,#FFC819,#AA934A); 
    background-attachment: fixed;
- } 
- 
- 
+ }
+
  .image-container {
    display: flex;
    justify-content: center;
  }
- 
+
  .image-container2 {
    display: flex;
    justify-content: center;
@@ -84,3 +93,38 @@ p{
    border-radius: 10px;
    text-align: center;
  }
+ nav ul {
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  height: var(--nav-height);
+  list-style: none;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 13px 20px #eee;
+  position: fixed;
+  top: var(--head-height);
+  overflow: auto;
+
+}
+nav ul li a {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #D33A2C;
+  font-weight: 300;
+  white-space: nowrap;
+  /* flex-wrap: nowrap; */
+  /* overflow: auto; */
+}
+nav ul li {
+  margin: 0px 19px;
+}
+nav ul li  :hover {
+  outline: 1px solid #bf3528;
+}
+button{
+  top: 1;
+}
