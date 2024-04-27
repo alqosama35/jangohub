@@ -9,10 +9,14 @@
     --white: #ffffff;
     --black:#000000;
   }
+  @font-face {
+    font-family: roboto slab;
+    src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+  }
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'roboto slab', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;

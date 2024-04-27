@@ -1,16 +1,36 @@
+@font-face {
+    font-family: robot slab;
+    src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
+}
+:root {  
+    --color1: #193AFF;  
+    --color2: #FFC819;  
+    --color3: #4356BF;
+    --color4: #AA934A;
+    --color5: #4D5480;
+    --color6: #555041;
+    --white: #ffffff;
+    --black:#000000;
+  }
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
+body{
+    font-family: 'roboto slab',sans-serif;
+}
+/*main section*/
 .main{
-    height: 600px;
+    height: 800px;
     width: 100%;
     background-size: cover;
     background-image: url(../Imgs/mountains.jpg);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 .main .container{
@@ -18,7 +38,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-top: 90px;
 }
 .main h1{
     font-size: 80px;
@@ -26,4 +46,161 @@
 }
 .main p{
     font-size: 30px;
+}
+.main .btn button{
+    margin: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0,0,0, 0.4);
+    filter: blur(.1px);
+    color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.main button:hover{
+    width: 155px;
+    height: 45px;
+    background-color: var(--color3);
+    color: var(--color2);
+    cursor: pointer;
+}
+/*Go to courses section*/
+.courses{
+    height: 400px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    
+}
+.courses .container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color3);
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.courses h3{
+    font-size: 50px;
+    font-weight: bolder;
+}
+.courses h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+.courses button{
+    margin: 40px 20px;
+    width: 200px;
+    height: 50px;
+    background-color: var(--color2);
+    filter: blur(.1px);
+    color: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.courses button:hover{
+    background-color: var(--color3);
+    color: var(--color2);
+    width: 205px;
+    height: 55px;
+    cursor: pointer;
+}
+/*features section*/
+.features{
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+}
+.features .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.features .sec{
+    margin: 20px 15px 20px;
+    padding: 20px 60px;
+    background-color: var(--color3);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.features i{
+    font-size: 120px;
+}
+.features h3{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+.features p{
+    text-align: center;
+    text-wrap:wrap;
+    margin-top: 20px;
+    font-weight: bold;
+}
+/*use section*/
+.use{
+    height: 400px;
+    background-color: #ffffff;
+}
+.use .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--color3);
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.use .text{
+    width: 50%;
+    padding: 40px;
+}
+.use h3{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.use p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+/*bottom section*/
+.bottom{
+    height: 500px;
+    background-color: var(--color3);
+}
+.bottom .container{
+    padding-top: 50px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+}
+.bottom .sec{
+    width: 33%;
+    color: #ffffff;
+    margin: 10px 30px;
+    
+}
+.bottom a{
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.bottom h4{
+    margin-bottom: 20px;
+}
+.bottom hr{
+    width: 30%;
+}
+.bottom p{
+    margin-bottom: 15px;
 }
