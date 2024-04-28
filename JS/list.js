@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         const fileName = document.getElementById("file-name").value;
         const fileDate = document.getElementById("file-date").value;
-        const fileTag = document.getElementById("file-tag").value || "None";
+        const fileTag = document.getElementById("file-tag").value || "others";
         const fileURL = document.getElementById("file-url").value;
 
         // Create a new table row with a link
