@@ -12,33 +12,32 @@
     <link rel="stylesheet" href="CSS/standard.css">
 </head>
 
-<body>
+<body id="body">
     <div class="std-top">
         <!-- list menu -->
     <div class="slide_menu">
         
-       
+      
        <div class="slide" id="slide">
            
            <div class="container">
-               
+            <div class="icon x" id="list_xicon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
                <div class="menu">
                    <h3>menu</h3>
                </div>
-               <div class="icon x" id="list_xicon">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
                <div class="list">
                    <ul>
-                       <a href=""><li>Home</li></a>
-                       <a href=""><li>Courses</li></a>
-                       <a href=""><li>News</li></a>
-                       <a href="#"><li>Assignment</li></a>
-                       <a href="#"><li>Exam Table</li></a>
-                       <a href="#"><li>Results</li></a>
-                       <a href="#"><li>Social Media</li></a>
-                       <a href="#"><li>About</li></a>
-                       <a href="#"><li>Contact</li></a>
+                       <a href="home.html"><li>Home</li></a>
+                       <a href="courses.html"><li>Courses</li></a>
+                       <a href="news.html"><li>News</li></a>
+                       <a href="assignment.html"><li>Assignment</li></a>
+                       <a href="examTable.html"><li>Exam Table</li></a>
+                       <a href="Results"><li>Results</li></a>
+                       <a href="socialMedia"><li>Social Media</li></a>
+                       <a href="About"><li>About</li></a>
+                       <a href="#contact"><li>Contact</li></a>
                    </ul>
                </div>
            </div>
@@ -47,17 +46,33 @@
      </div>
      <!--header-->
      <header>
-        <ul>
+        <ul class="funcContainer">
             <div class="icon" id="list_icon">
                 <i class="fa-solid fa-list"></i>
             </div>
-           <li class="logout"><a href="project.html">Log out</a></li>
-           <li><a href="#">Home</a></li>
-           <li><a href="#">Contact</a></li>
-           <li class="logo">Jungo</li>
-        </ul> 
-     </header>
-     <script src="JS/slide.js"></script>
+            
+            <li class="logout" id="logout"><a href="">Log out</a></li>
+           <li class="login active" id="login"><a href="">Login</a></li>
+           <li class="theme"><button id="theme">Dark Mode</button></li>
+           </ul>
+        <ul class="ulm">
+            
+          <li>
+            <a href="home.html">Home</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="about.html">About </a>
+          </li>
+        </ul>
+        <div class="logo">
+          <p>Jungo</p>
+        </div>
+        <script src="JS/slide.js"></script>
+      </header>
+      
     </div>
 
 
@@ -65,9 +80,9 @@
         <div class="container">
             <h1>Jungo Hub</h1>
         <p>This website is the hub for all university information</p>
-        <div class="btn">
-            <a href=""><button>SignIn</button></a>
-            <a href=""><button>SignUp</button></a>
+        <div class="btn" id="signbtn">
+            <a href="Loginpage1.html" id="signinbtn"><button>SignIn</button></a>
+            <a href="Loginpage2.html" id="signupbtn"><button>SignUp</button></a>
         </div>
         </div>
         
@@ -76,7 +91,7 @@
         <div class="container">
             <h3>You Have 6 Courses this term</h3>
             <h4>Are you Ready to check them?</h4>
-            <a href=""><button>Go To Courses</button></a>
+            <a href="courses.html"><button>Go To Courses</button></a>
         </div>
     </div>
     <div class="features">
@@ -112,37 +127,37 @@
         <div class="container">
             <div class="sec">
                 <h4>Courses<hr></h4>
-                <a href="">
+                <a href="courses/pl.html">
                     <p>PL-1</p>
-                </a><a href="">
+                </a><a href="courses/it.html">
                     <p>IT</p>
-                </a><a href="">
+                </a><a href="courses/math.html">
                     <p>Math-2</p>
-                </a><a href="">
+                </a><a href="courses/statistics.html">
                     <p>Statistics-2</p>
-                </a><a href="">
+                </a><a href="courses/electronics.html">
                     <p>Electronics</p>
-                </a><a href="">
+                </a><a href="courses/discrete.html">
                     <p>Discrete Math</p>
                 </a>
             </div>
             <div class="sec">
                 <h4>Pages<hr></h4>
-                <a href="">
+                <a href="courses.html">
                     <p>Courses</p>
-                </a><a href="">
+                </a><a href="news.html">
                     <p>News</p>
-                </a><a href="">
+                </a><a href="about.html">
                     <p>About</p>
-                </a><a href="">
+                </a><a href="socialMedia.html">
                     <p>Social Media</p>
-                </a><a href="">
+                </a><a href="liveMeetings">
                     <p>Live Meetings</p>
-                </a><a href="">
+                </a><a href="assignments">
                     <p>Assignments</p>
-                </a><a href="">
+                </a><a href="examTable">
                     <p>Exam Time Table</p>
-                </a><a href="">
+                </a><a href="results">
                     <p>Results Page</p>
                 </a><a href="">
                     <p></p>
@@ -155,11 +170,15 @@
             <div class="sec">
                 <h4>Contact Us<hr></h4>
                 <p>fcaih.csgo@gmail.com</p>
-                <h4>Location<hr></h4>
-                <img src="" alt="">
+                <hr>
+                <img src="Imgs/location.PNG" alt="location" usemap="#location">
+                <map name="location">
+                    <area shape="rect" coords="62,76,206,123" alt="fcaih" href="Imgs/fcaih.PNG">
+                    <area shape="rect" coords="221,17,365,64" alt="helwan" href="Imgs/helwan.PNG">
+                  </map>
             </div>
         </div>
     </div>
-    
+    <script src="JS/home.js"></script>
 </body>
 </html>

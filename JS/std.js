@@ -1,11 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',function(){
     const logoutbtn = document.getElementById('logout');
     const loginbtn = document.getElementById('login');
-    const signinbtn = document.getElementById('signbtn');
     const themebtn = document.getElementById('theme');
     const body = document.getElementById('body');
-    
-    
+
     // Check if signedin key is already set in localStorage
     if (!localStorage.getItem('signedin')) {
         // If not set, set it to 'true'
@@ -16,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (signedin === 'true') {
         logoutbtn.classList.add('active');
         loginbtn.classList.remove('active');
-        signinbtn.classList.toggle('disappear');
+        
         
 
 
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    //change the theme
+    //to change theme
     themebtn.addEventListener('click', function () {
         // Perform your action here
         body.classList.toggle('dark');
@@ -50,3 +48,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 });
+

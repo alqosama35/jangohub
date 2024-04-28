@@ -13,26 +13,30 @@
     font-family: roboto slab;
     src: url(../fonts/RobotoSlab-VariableFont_wght.ttf);
   }
-
+  .dark {
+    --white: rgb(48, 47, 47);
+    --black:#ffffff;
+    --color3: rgb(66, 66, 66);
+    --color4: #555041;
+    color: white;
+    
+    
+  }
+  
 /* Body styles */
 body {
     font-family: 'roboto slab', sans-serif;
-    background-color: #f4f4f4;
+    
     margin: 0;
     padding: 0;
 }
 
-/* Header styles */
-header {
-    background-color: var(--color1);
-    color: white;
 
-    text-align: center;
-}
 /*file type menu styles*/
 .types{
     height: 100px;
     background-color: var(--color4);
+    z-index: 2;
 }
 .types .container{
     height: 100%;
@@ -62,7 +66,7 @@ header {
 }
 .types a{
     text-decoration: none;
-    color: var(--white);
+    color: white;
     font-size: 30px;
     font-weight: bold;
     
@@ -72,12 +76,13 @@ header {
 }
 /* File list styles */
 #file-list {
-    margin: 20px;
+    margin: 10px 20px 0px;
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 #file-list h2 {
     margin-top: 0;
@@ -85,11 +90,12 @@ header {
 
 /* Add file form styles */
 #add-file {
-    margin: 20px;
+    margin: 5px 20px 20px;
     padding: 20px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 #add-file form {
@@ -135,7 +141,7 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: var(--white);
     font-weight: bold;
 }
 
