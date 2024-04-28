@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
  }
+
  .margin-top{
     height: 50px;
  }
@@ -26,8 +27,10 @@
 body {
     font-family: 'roboto slab';
     margin:  0px;
-   padding:  0px;
-   overflow-x: hidden;
+    padding:  0px;
+    overflow-x: hidden;
+    height: 2000px;
+    position: relative;
 }
 a{
     text-decoration: none;
@@ -62,7 +65,9 @@ a{
 .icon i{
     font-size: 30px;
     padding: 5px;
+    margin: 5px 0px 0px 10px;
     color: aliceblue;
+    position: fixed;
     
 }
 .icon{
@@ -142,7 +147,22 @@ a{
     z-index: 100;
     height: 50px;
  }
- 
+ .home {
+    margin-left: 250px;
+    font-size: 30px;
+    padding: 7px ;
+    transition: 0.5s;
+ }
+ .cont {
+    margin-left: 90px;
+    font-size: 30px;
+    padding: 7px ;
+    transition: 0.5s;
+ }
+ .cont:hover, .home:hover {
+    background-color: rgb(255, 255, 255) !important;
+    color: blue;
+ }
  
  header ul a {
     text-decoration: none;
@@ -167,8 +187,7 @@ a{
    border-radius: 10px;
    background-color: #ff3939c0; 
    font-size: 16px !important;
-   border: 1px solid white;
-   /* box-shadow: 0px 0px  8px rgba(0, 0, 0, 0.5); */
+   margin-left: 100px;
  
  }
  
@@ -176,6 +195,10 @@ a{
 .bottom{
     height: 500px;
     background-color: var(--color3);
+    position: absolute;
+    bottom: 0px;
+    /* position: fixed; */
+    width: 100%;
     
 }
 .bottom .container{
