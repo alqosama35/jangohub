@@ -17,27 +17,26 @@
         <!-- list menu -->
     <div class="slide_menu">
         
-       
+      
        <div class="slide" id="slide">
            
            <div class="container">
-               
+            <div class="icon x" id="list_xicon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
                <div class="menu">
                    <h3>menu</h3>
                </div>
-               <div class="icon x" id="list_xicon">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
                <div class="list">
                    <ul>
                        <a href="home.html"><li>Home</li></a>
                        <a href="courses.html"><li>Courses</li></a>
-                       <a href=""><li>News</li></a>
-                       <a href="#"><li>Assignment</li></a>
-                       <a href="#"><li>Exam Table</li></a>
-                       <a href="#"><li>Results</li></a>
-                       <a href="#"><li>Social Media</li></a>
-                       <a href="#"><li>About</li></a>
+                       <a href="news.html"><li>News</li></a>
+                       <a href="assignment.html"><li>Assignment</li></a>
+                       <a href="examTable.html"><li>Exam Table</li></a>
+                       <a href="Results"><li>Results</li></a>
+                       <a href="socialMedia"><li>Social Media</li></a>
+                       <a href="About"><li>About</li></a>
                        <a href="#contact"><li>Contact</li></a>
                    </ul>
                </div>
@@ -47,19 +46,33 @@
      </div>
      <!--header-->
      <header>
-        <ul>
+        <ul class="funcContainer">
             <div class="icon" id="list_icon">
                 <i class="fa-solid fa-list"></i>
             </div>
-           <li class="logout" id="logout"><a href="">Log out</a></li>
+            
+            <li class="logout" id="logout"><a href="">Log out</a></li>
            <li class="login active" id="login"><a href="">Login</a></li>
            <li class="theme"><button id="theme">Dark Mode</button></li>
-           <li><a href="#">Home</a></li>
-           <li><a href="#">Contact</a></li>
-           <li class="logo">Jungo</li>
-        </ul> 
-     </header>
-     <script src="JS/slide.js"></script>
+           </ul>
+        <ul class="ulm">
+            
+          <li>
+            <a href="home.html">Home</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="about.html">About </a>
+          </li>
+        </ul>
+        <div class="logo">
+          <p>Jungo</p>
+        </div>
+        <script src="JS/slide.js"></script>
+      </header>
+      
     </div>
 
 
@@ -130,29 +143,33 @@
             </div>
             <div class="sec">
                 <h4>Pages<hr></h4>
-                <a href="">
+                <a href="courses.html">
                     <p>Courses</p>
-                </a><a href="courses.html">
+                </a><a href="news.html">
                     <p>News</p>
-                </a><a href="">
+                </a><a href="about.html">
                     <p>About</p>
-                </a><a href="about page.html">
+                </a><a href="socialMedia.html">
                     <p>Social Media</p>
-                </a><a href="">
+                </a><a href="liveMeetings">
                     <p>Live Meetings</p>
-                </a><a href="">
+                </a><a href="assignments">
                     <p>Assignments</p>
-                </a><a href="">
+                </a><a href="examTable">
                     <p>Exam Time Table</p>
-                </a><a href="">
+                </a><a href="results">
                     <p>Results Page</p>
+                </a><a href="">
+                    <p></p>
+                </a><a href="">
+                    <p></p>
+                </a><a href="">
+                    <p></p>
                 </a>
-                
             </div>
-            <div class="sec" id="contact">
+            <div class="sec">
                 <h4>Contact Us<hr></h4>
                 <p>fcaih.csgo@gmail.com</p>
-                <h4>Location<hr></h4>
                 <hr>
                 <img src="Imgs/location.PNG" alt="location" usemap="#location">
                 <map name="location">
