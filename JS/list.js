@@ -23,4 +23,50 @@ document.addEventListener("DOMContentLoaded", function() {
         // Clear the form fields
         addFileForm.reset();
     });
+
+
+
+    // Define a function to handle filtering
+function filterFiles(filterLink) {
+    // Add event listener to the filter link
+    filterLink.addEventListener('click', function(event) {
+        // Prevent the default behavior of the link
+        event.preventDefault();
+    
+        // Get the selected tag value
+        const selectedTag = filterLink.textContent.trim().toLowerCase();
+        console.log(selectedTag);
+        
+        // Get all file items
+        const fileItems = document.querySelectorAll('#file-list tbody tr');
+        
+        // Loop through each file item
+        fileItems.forEach(fileItem => {
+            // Get the tag column for the current file item
+            const tagColumn = fileItem.querySelector('td:nth-child(3)');
+            
+            // Check if the tag column contains the selected tag
+            if (tagColumn.textContent.trim().toLowerCase() === selectedTag) {
+                // Show the file item if it matches the selected tag
+                fileItem.style.display = 'table-row';
+            } else {
+                // Hide the file item if it doesn't match the selected tag
+                fileItem.style.display = 'none';
+            }
+        });
+    });
+}
+
+// Get the filter link elements
+const filterLinks = document.querySelectorAll('.types li');
+
+// Loop through each filter link and apply filtering functionality
+filterLinks.forEach(filterLink => {
+    // Apply filtering functionality
+    filterFiles(filterLink);
+});
+
+
+
+  
 });
