@@ -1,39 +1,79 @@
 :root {
    --transition: 0.2s;
+   --heightHed: 50px;
+   --color1: #193AFF;  
+   --color2: #FFC819;  
+   --color3: #4356BF;
+   --color4: #AA934A;
+   --color5: #4D5480;
+   --color6: #555041;
+   --white: #ffffff;
+   --black:#000000;
+}
+* {
+   box-sizing: border-box;
+
 }
 body {
    padding: 0px;
    margin: 0px;
-   background-color: #fdfdfd;
+   background-color: rgb(205, 233, 255);
    height: 1600px;
    position: relative;
+   overflow-x: hidden;
+   /* width: 1000px; */
+   
 }
+/* .imgdiv {
+   background-color: rgba(0, 0, 0,0.6);
+   position: absolute;
+   z-index: 1000;
+   width: 100%;
+   top: 70px;
+   height: 730px;
+
+}
+.mountains {
+   position: relative;
+   width: 1200px;
+   height: 800px;
+   filter: blur(0px);
+
+} */
 
 header {
    display: flex;
-   height: var(--height);
-   background-color: white;
+   /* height: var(--height); */
+   background-color: var(--color3);
    position: fixed;
+   height: var(--heightHed);
    width: 100%;
    justify-content: space-between;
    align-items: center;
-   --height: 70px;
-   box-shadow: 0px 10px 20px #e6e6e6; 
-   z-index: 100;
+   /* height: 70px; */
+   box-shadow: 0px 0px 10px #8a8a8a; 
+   z-index: 1500;
 }
 ul {
    list-style: none;
    display: flex;
 }
 .logo {
-   width: 100px; height: var(--height);
-   background-color: #376db3;
-   text-align: center; color: rgb(255, 208, 1);
-   letter-spacing: 3px;
+   width: 100px;
+    height: var(--heightHed);
+   background-color: orange;
+   text-align: center; 
+   color: rgb(255, 208, 1);
+   letter-spacing: 1px;
    font-size: 23px;
    font-weight: 700;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
+}
+.logo p {
+   color: black;
+   margin: 8px;
+
 }
 ul {
    margin-right: 100px;
@@ -46,16 +86,18 @@ ul li {
    font-family: Arial;
 }
 ul a {
+   color: white;
+   margin: 0px 15px;
    text-decoration: none;
-   font-size: 25px; color: #1a4b8b;
+   font-size: 25px; 
    transition: var(--transition);
 }
 header ul a:hover {
-   color: red;
+   color: rgb(255, 230, 0);
 }
 .login {
-   background-color: #c7efff;
-   padding: 15px 10px;
+   background-color: #ffb619;
+   padding: 10px 10px;
    text-align: center;
    margin:auto 0px auto 20px;
    border-radius: 12px;
@@ -63,23 +105,29 @@ header ul a:hover {
    text-decoration: none;
    color: rgb(0, 0, 0);
    min-width: 150px;
+   transition: 0.5s;
 
+}
+.login:hover {
+   background-color: red;
 }
 .logform {
    display: flex;
    flex-direction: column;
-   width: 50%;
-   height: 370px;
+   width: 40%;
+   height: 350px;
    background-color: white;
    position: absolute;
    top: 150px;
-   left: 25%;
+   left: 30%;
    border-radius: 15px;
-   box-shadow: -10px 18px 20px #dbdbdb , 10px 18px 20px #dbdbdb;
    align-items: center;
    padding-top: 40px;
+   box-shadow: 0px 0px 12px 0px  rgb(99, 99, 99);
    border: 1px solid #dbdbdb;
+   z-index: 1000;
 }
+
 input {
    width: 80%;
    padding: 20px;
@@ -139,13 +187,30 @@ img {
 
 }
 .about {
-   width: 100%;
    height: 400px;
+   width: 700px;
+   /* margin: 0px calc((100% - 900px)/2); */
    /* margin-top: 50px; */
-   background-color: #EEEEEE;
+   margin: 0px calc((100% - 700px)/2);
+   background-color: #193AFF;
+   padding: 20px;
    position: absolute;
    bottom: 350px;
+   border-radius: 10px;
+   outline: 7px solid  rgba(255, 255, 255);
+   transition: 0.2s;
   
+}
+.aboutus {
+   font-size: 20px;
+   font-family: Arial;
+   line-height: 35px;
+   color: rgb(255, 255, 255);
+   letter-spacing: 1px;
+   word-spacing: 2px;
+}
+.about:hover {
+   background-color:  rgba(55, 85, 250, 0.9) ;
 }
 .flag {
    position: absolute;
@@ -157,12 +222,13 @@ img {
 
 }
 .contact span {
-   padding: 10px; margin-top: 20px;
+   padding: 10px;
+   margin-top: 20px;
    background-color: black;
    position: absolute;
    right: 50px;
    color: rgb(255, 255, 255);
-   font-size: 15px;
+   font-size: 20px;
    border-top-right-radius: 10px ;
    border-bottom-right-radius: 10px ;
    letter-spacing: 1.5px;
@@ -170,7 +236,7 @@ img {
 }
 .contact span::before {
    content: "f";
-   font-size: large;
+   font-size: 20px;
    font-weight: 500;
    position: absolute;
    width: 25px;
@@ -184,9 +250,51 @@ img {
    box-sizing: border-box;
    padding: 10px;
 }
-.watsapp span {
-   margin-top: 90px;
-   background-color: green;
-   text-align: center;
-   letter-spacing: 1.5px;
+.watsapp img {
+   width: 30px;
+   height: 40px;
+   position: absolute;
+   right: 110px;
+   top: 1.4px;
+   z-index: 100;
+   border-radius: 50%;
+   background-color: black;
+   color: white;
+   border: 1px solid #000000;
+ 
 }
+.wpp {
+   position: absolute;
+   font-size: 20px;
+   /* height: 40px; */
+   text-align: center;
+   background-color: rgb(1, 171, 1);
+   padding: 10px;
+   padding-left: 30px;
+   border-radius: 10px;
+   right: 35px;
+   top: 110px;
+
+}
+.pos {
+   display: flex;
+   width: 260px;
+   justify-content: space-between;
+   background-color: rgb(46, 118, 212);
+   border-radius: 10px;
+   margin: 10px 0px;
+}
+.pos input {
+   width: 20px;
+   margin: 0px;
+   margin-left: 30px;
+}
+.pos p {
+   margin-right: 19px;
+   color: white;
+   font-size: 20px;
+   font-family: arial;
+}
+
+
+
