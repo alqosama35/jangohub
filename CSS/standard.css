@@ -7,6 +7,8 @@
     --color6: #555041;
     --white: #ffffff;
     --black:#000000;
+    --transition: 0.2s;
+   --heightHed: 50px;
   }
 
   @font-face {
@@ -69,6 +71,7 @@ a{
     position: absolute;
     width: fit-content;
     z-index: 120;
+    
 }
 .icon:hover{
     border: solid blanchedalmond;
@@ -81,7 +84,7 @@ a{
     left: 150px;
     font-size: 20px;
     color: aliceblue;
-    z-index: 150;
+    z-index: 155;
     margin-top: 15px;
 }
 .slide .container{
@@ -125,52 +128,109 @@ a{
 
 /* header style */
 
+.logout{
+    display: none;
+}
+.login{
+    display: none;
+}
+.active{
+    display: block;
+}
+.disappear{
+    display: none;
+}
+
+ #theme{
+    width: 75px;
+    height: 50px;
+    background-color: var(--black);
+    color: var(--white);
+ }
+ #theme:hover{
+    color: var(--color2);
+    cursor: pointer;
+ }
  
- 
- header ul {
+header {
     display: flex;
-    width: 100%;
-    margin: 0px;
-    /* margin-left: 200px; */
-    position: fixed;
-    
-    /* margin-bottom: 20px; */
-    list-style: none;
+    /* height: var(--height); */
     background-color: var(--color3);
+    position: fixed;
+    height: var(--heightHed);
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    height: 50px;
+    /* height: 70px; */
+    box-shadow: 0px 0px 10px #8a8a8a; 
+    z-index: 11;
  }
- 
- 
- header ul a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    margin-left: 50px;
- }
- 
+
  .logo {
-    background-color: rgb(255, 150, 3);
-    height: 50px;
-    padding-top: 10px;
-    width: 90px;
-    color: rgb(0, 0, 0);
+    width: 100px;
+     height: var(--heightHed);
+    background-color: orange;
+    text-align: center; 
+    color: rgb(255, 208, 1);
+    letter-spacing: 1px;
+    font-size: 23px;
+    font-weight: 700;
+    
+   
+ }
+ .logo p {
+    color: black;
+    margin: 8px;
+ 
+ }
+
+ p {
+    margin-top: 18px;
+ }
+ .ulm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 30%;
+    height: 100%;
+    list-style: none;
     font-size: 20px;
+ }
+
+ 
+ header ul a:hover {
+    color: rgb(255, 230, 0);
+ }
+ .login {
+    
+    background-color: var(--color1);
+ }
+ .logout{
+    background-color: red;
+ }
+ .logout , .login{
+    margin-left: 50px;
+    
+    padding: 10px 5px;
     text-align: center;
-    font-weight: bolder;
+    border-radius: 12px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    margin-right: 10px;
  }
- 
- .logout a {
-   padding: 5px 10px;
-   border-radius: 10px;
-   background-color: #ff3939c0; 
-   font-size: 16px !important;
-   border: 1px solid white;
-   /* box-shadow: 0px 0px  8px rgba(0, 0, 0, 0.5); */
- 
+
+ .funcContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+    list-style: none;
  }
+
  
  /*bottom section*/
 .bottom{
@@ -205,4 +265,9 @@ a{
 .bottom p{
     margin-bottom: 15px;
 }
- 
+.bottom img{
+    border:  solid var(--black) 1px;
+}
+ .blank{
+    height: 400px;
+ }
