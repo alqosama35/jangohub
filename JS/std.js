@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     const logoutbtn = document.getElementById('logout');
     const loginbtn = document.getElementById('login');
-    const themebtn = document.getElementById('theme');
-    const body = document.getElementById('body');
+    
 
     // Check if signedin key is already set in localStorage
     if (!localStorage.getItem('signedin')) {
@@ -40,6 +39,8 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
     //to change theme
+    const themebtn = document.getElementById('theme');
+    const body = document.getElementById('body');
     themebtn.addEventListener('click', function () {
         // Perform your action here
         body.classList.toggle('dark');
