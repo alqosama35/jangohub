@@ -48,11 +48,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 150px;
 }
 .main h1{
     font-size: 80px;
     font-weight: bolder;
+    
 }
 .main p{
     font-size: 30px;
