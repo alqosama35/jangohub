@@ -1,17 +1,23 @@
 p{
  text-align: left;
- color: #AA934A;
+ color: #f1fd4e;
  font-size: 18pt;
 }
+
 button{
-  top: 1;
+  background-color: #fff200;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 h1{
-  font-family: myfont;
+  font-family: my font;
   text-align: center;
   color: #FFC819 ;
   font-size: 40pt;
-  margin-top: 30px;
+
 }
 h2{
   font-family: myfont;
@@ -23,17 +29,20 @@ h2{
   border-style: double;
   border: 2px solid black;
   border-radius: 12px;
-  padding: 5px;
+  padding: 20px;
 }
 
 body {
   margin: 0;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  padding-bottom: 215px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom,#193AFF,#4356BF); 
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+    background-image: url(../Imgs/pictures/contact\ back.jpg);
 } 
 
 
@@ -55,7 +64,7 @@ body {
   margin-right: 150px;
   margin-top: 25px;
   align-items: center;
-  box-shadow: 30px 2px 8px rgba(0, 0, 0, 0.416);
+  box-shadow: 30px 2px 8px rgba(0, 0, 0, 0.473);
   transition: transform 0.3s ease; 
 }
 
@@ -76,7 +85,7 @@ body {
   display: flex;
   justify-content: center; 
   align-items: center; 
-  height: 100vh; 
+  height: 100%; 
 }
 
 #info-container {
@@ -84,8 +93,43 @@ body {
   bottom: 20px;
   left: 50%; 
   transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(0, 0, 0);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 10px;  
   text-align: center;
+}
+
+.form-group {
+  margin-bottom: 200px;
+  text-align: center;
+  color: #c09402;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+.button{
+  text-align: center;
+  align-items: center;
+}
+/* Container styling */
+.container {
+  min-height: 100%;
+  position: relative;
 }
