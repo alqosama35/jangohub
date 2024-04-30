@@ -1,0 +1,14 @@
+:root {
+    --color1: #ffffff;
+    --color2: #8c8b99;
+    --color3: rgb(0, 0, 0);
+    --color4: rgb(40, 63, 218);
+    --color5: black;
+    --color6: black;
+}
+
+.our {
+    background-color: wheat;
+    color: rgb(62, 116, 62);
+    border-block: 50px;
+}
