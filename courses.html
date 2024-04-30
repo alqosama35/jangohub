@@ -5,14 +5,20 @@
     <link rel="stylesheet" href="CSS/slide.css"> 
     <link rel="stylesheet" href="CSS/homePage.css">
     <link rel="stylesheet" href="CSS/all.css"> 
+    <link rel="stylesheet" href="CSS/dark-mode.css">
+
   </head>
   <body>
     <header>
       <ul>
        
-            <li class="logout"><a href="New_login.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+            <li class="logout"><a href="Loginpage1.html"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
             <li class="home"><a  href="home.html"><i class="fas fa-home"></i> Home</a></li>
             <li class="home"><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+            <i class="far fa-moon" id="icon"></i>
+            <li class="dark-mode-toggle"><button id="darkModeToggle">
+              Dark Mode
+            </button></li>
             <li class="logo">Jungo</li>
          
       </ul>
@@ -136,7 +142,7 @@
           <div class="sec">
               <h4>Contact Us </h4>
               <p>fcaih.csgo@gmail.com</p>
-               
+    
               <img src="Imgs/location.PNG" alt="location" usemap="#location">
               <map name="location">
                   <area shape="rect" coords="62,76,206,123" alt="fcaih" href="Imgs/fcaih.PNG">
@@ -145,6 +151,19 @@
           </div>
       </div>
   </div>
+  <script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = 'dark Mode';
+      } else {
+        darkModeToggle.textContent = 'Light Mode';
+      }
+    });
+  </script>
 
   </body>
 </html>

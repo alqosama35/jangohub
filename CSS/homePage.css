@@ -224,3 +224,21 @@ img:hover {
 .blank{
    height: 400px;
 }
+#darkModeToggle {
+   background-color: rgb(62, 123, 255);
+   height: 45px;
+   padding-left: 50px;
+   border-radius: 10px;
+   font-size: 15px;
+   border: none;
+   margin-right: 10px;
+   cursor: pointer;
+}
+#icon {
+   position: absolute;
+   padding: 10px;
+   color: #193AFF;
+   border-radius: 50%;
+   background-color: white;
+   right: 255px;
+}
