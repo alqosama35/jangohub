@@ -16,24 +16,22 @@
 body {
    margin:  0px;
    padding:  0px;
-   height: 850px;
+   position: relative;
+   height: 1500px;
    overflow-x: hidden;
-   /* position: relative; */
    font-family:arial;
    background-color: #eee;
-   /* background-color: var(--color5); */
 
 }
 
 
 header ul {
    display: flex;
-   width: 81%;
+   width: 100%;
    margin: 0px;
-   /* margin-left: 200px; */
    position: fixed;
    right: 0px;
-   /* margin-bottom: 20px; */
+   padding-left: 210px;
    height: var(--head-height);
    list-style: none;
    background-color: var(--color1);
@@ -60,13 +58,22 @@ header ul a {
 }
 
 .logout a {
-  padding: 5px 10px;
+  padding: 14px 10px;
   border-radius: 10px;
-  background-color: #ff3939c0; 
+  background-color: #45b7d0c0; 
   font-size: 16px !important;
-  border: 1px solid white;
-  /* box-shadow: 0px 0px  8px rgba(0, 0, 0, 0.5); */
 
+}
+.home a{
+   padding: 11.5px 8px;
+}
+.home :hover {
+   background-color: white;
+   color: blue;
+}
+.logout :hover{
+   background-color: white;
+   color: blue;
 }
 
 /*! -------------- Courses ---------------- */
@@ -77,7 +84,6 @@ header ul a {
    margin-top: 80px;
    width: 75%;
    display: grid;
-   /* grid-template-columns: repeat(2, 45%); */
    grid-template-columns: repeat(auto-fill, minmax(20%,300px));
    gap: 25px;
    justify-content:center;
@@ -93,9 +99,6 @@ header ul a {
    align-items: center;
    justify-content: center;
    box-shadow: 0px 0px 9px  rgba(62, 62, 62, 0.3);
-   /* padding-left: 20px; */
-   /* margin-top: 10px; */
-   /* margin-left: 270px; */
    border-radius: 10px;
 }
 
@@ -170,3 +173,54 @@ img:hover {
    color: rgb(0, 0, 0);
 }
 
+
+.bottom{
+   position: absolute;
+   bottom: 0px;
+   right: 0px;
+   width: 81%;
+   height: 500px;
+   background-color: var(--color3);
+   
+}
+.bottom .container{
+   padding-top: 50px;
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   flex-direction: row;
+}
+.bottom .sec{
+   width: 33%;
+   color: #ffffff;
+   margin: 10px 30px;
+   
+}
+.bottom a{
+   text-decoration: none;
+   color: #ffffff;
+   margin-bottom: 15px;
+}
+
+.sec a p {
+   margin-bottom: 25px;
+   
+}
+.sec a  :hover{
+   background-color: rgb(0, 0, 255);
+}
+.bottom h4{
+   margin-bottom: 20px;
+}
+.bottom hr{
+   width: 30%;
+}
+.bottom p{
+   margin-bottom: 15px;
+}
+.bottom img{
+   border:  solid var(--black) 1px;
+}
+.blank{
+   height: 400px;
+}
