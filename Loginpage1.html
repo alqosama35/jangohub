@@ -2,97 +2,79 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="CSS/LoginStyles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/New_login.css" />
   </head>
   <body>
-    <header>
-      <a class="login" href="Loginpage2.html">
-        Create an account
-      </a>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#about">About </a>
-        </li>
-      </ul>
-      <div class="logo">
-        <p>Jungo</p>
-      </div>
-      
-    </header>
-    <!-- <img class="mountains" src="Imgs/mountains.jpg">
-    <div class="imgdiv">
+    <img class="backimg" src="imgs/back6.jpg">
+    <form id="form">
+      <div class="signin">
+        <h3 class="str1">Sign in</h3>
+        <div class="icon">
+          <a href="https://github.com/">
+            <img src="imgs/github.png" />
+          </a>
+          <a href="https://google.com">
+            <img src="imgs/google.png" />
+          </a>
+          <a href="https://www.facebook.com/">
+            <img src="imgs/face.png" />
+          </a>
+        </div>
 
-    </div> -->
-    <form action="">
-      
-    <div class="logform">
-      <input type="email" placeholder="email / phone" 
-       name="username" required>
-      <input tupe="password" placeholder="password"  name="username" required>
-      <input class="submet" type="submit" value="Log in">
-      <a class="newac" href="Loginpage2.html">Create a new account</a>
-    </div>
+        <input type="text" id="username" placeholder="username" />
+        <div id="error"></div>
+        <input type="password" id="password" placeholder="password" />
+        <div id="errorp"></div>
+        <input type="submit" value="SIGN IN" id="submit" class="submit" />
+      </div>
+
+      <div class="signup">
+        <h2>Create,<br> Account<span>!</span></h2>
+        <p>Sign up if you don't have an account</p>
+        <a href="Loginpage2.html">
+        <!-- <p>SIGN UP</p>  -->
+        SIGN UP 
+        </a>
+      </div>
     </form>
 
-    <div class="flag"  id="about">
-      
-    </div>
-    <div class="about">
-      <p class="aboutus">
-        Computer Science and Artificial 
-        Intelligence students of Helwan
-         University would hugely benefit
-          from this website as it allows
-           them to upgrade their college 
-           life with educational access to 
-           all of their subjects. This is 
-           where the students can select 
-           subjects they want to study,
-            and conveniently
-         find and access them with the help 
-         of an easy GUI materials needed
-      </p>
-    </div>
-    <div class="contact" id="contact">
-      
-      <img src="Imgs/image3.webp">
-      <ul>
-        <li class="face">
-          <a href="#">
-            <span>  Facebook </span> 
-          </a>
-        </li>
-        <li class="watsapp">
-          
-          <a class="wpp" href="#">
-          Whatsapp
+    <script>
+      var error = document.getElementById("error");
+      var form = document.getElementById("form");
+      var username = document.getElementById("username");
+      var password = document.getElementById("password");
 
-           <img src="Imgs/apps.8985.13655054093851568.1c669dab-3716-40f6-9b59-de7483397c3a.png">
-          </a>
-      <h1 style="margin-left: 150px;
-      font-size: 60px; color: blue;
-      font-family: Pacifico, cursive;
-      letter-spacing: 2px; word-spacing: -9px;
-      text-shadow: 3px 2px 1px  red;"> Jun Go</h1>
+      form.addEventListener("submit", function (event) {
+        let Error = [];
+        let Errpass = [];
 
-        </li>
-      </ul>
-    </div>
-  
+        if (username.value === "" || username.value == null)
+          Error.push(" This Filed Is Required");
+        else {
+          var x = false;
+          for (let i = 0; i < username.value.length; i++) {
+            if (username.value[i] === "@") {
+              x = true;
+              break;
+            }
+          }
+          if (!x) Error.push("Please include an '@' in the email address");
+        }
+
+        if (Error.length > 0) {
+          event.preventDefault();
+          error.innerHTML = Error.join("<br />");
+        }
+
+        if (password.value === "" || password.value == null)
+          Errpass.push(" Password Is Required");
+        if (Errpass.length > 0) {
+          event.preventDefault();
+          errorp.innerHTML = Errpass.join("<br />");
+        }
+      });
+    </script>
   </body>
 </html>
-
-
-
-
