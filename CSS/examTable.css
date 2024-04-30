@@ -10,9 +10,8 @@
     height: 200;
 }
 .exam .container{
-    
     max-width: 800px;
-    background-color: #fff;
+    background-color: #3c8dff; 
     margin: 50px auto;
     padding: 20px;
     border-radius: 8px;

@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="CSS/standard.css">
     <link rel="stylesheet" href="CSS/all.css">
     <link rel="stylesheet" href="CSS/examTable.css">
+    <style>
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1f1f1f;
+            color: #000000;
+        }
+
+    </style>
 </head>
     
-</head>
+
 <body>
     <div class="std-top">
         <!-- list menu -->
@@ -51,7 +59,12 @@
             
             <li class="logout" id="logout"><a href="">Log out</a></li>
            <li class="login active" id="login"><a href="">Login</a></li>
-           <li class="theme"><button id="theme">Dark Mode</button></li>
+           <!-- <li class="theme"><button id="theme">Dark Mode</button></li> -->
+           <div class="dark-mode-toggle">
+            <button id="darkModeToggle">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+        </div>
            </ul>
         <ul class="ulm">
             
@@ -203,6 +216,43 @@
             </div>
         </div>
     </div>
+
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get the dark mode toggle button
+    var darkModeToggle = document.getElementById('darkModeToggle');
+
+    // Check if the dark mode is enabled or disabled
+    var isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+    // Update the appearance based on the current mode
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.textContent = "Light Mode";
+    } else {
+        document.body.classList.remove('dark-mode');
+        darkModeToggle.textContent = "Dark Mode";
+    }
+
+    // Toggle dark mode when the button is clicked
+    darkModeToggle.addEventListener('click', function() {
+        isDarkMode = !isDarkMode;
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.textContent = "Light Mode";
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            document.body.classList.remove('dark-mode');
+            darkModeToggle.textContent = "Dark Mode";
+            localStorage.setItem('darkMode', null);
+        }
+    });
+});
+
+    </script>
+
 
 </body>
 </html>
