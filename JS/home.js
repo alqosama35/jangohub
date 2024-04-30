@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutbtn = document.getElementById('logout');
     const loginbtn = document.getElementById('login');
     const signinbtn = document.getElementById('signbtn');
-    const themebtn = document.getElementById('theme');
-    const body = document.getElementById('body');
+    
     
     
     // Check if signedin key is already set in localStorage
@@ -40,13 +39,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     });
-
+    const themebtn = document.getElementById('theme');
+    const body = document.getElementById('body');
+    const reverse = document.getElementById('reverse')
     //change the theme
     themebtn.addEventListener('click', function () {
         // Perform your action here
         body.classList.toggle('dark');
+        reverse.classList.toggle('reverse');
     
         
 
     });
+
+    var videoFrame = document.getElementById("videoFrame");
+    videoFrame.onload = function() {
+        var video = videoFrame.contentWindow.document.querySelector("video");
+        video.pause(); // Pause the video
+        // You can also add other controls here as needed
+    };
 });
