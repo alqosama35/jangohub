@@ -8,6 +8,10 @@
     --color6: #555041;
     --white: #ffffff;
     --black:#000000;
+    --cont:rgba(171, 170, 170, 0.455);
+    --text: black;
+    --header:rgba(118, 118, 118, 0.658);
+    --bckurl: url('../Imgs/bck/whitelong.jpg');
   }
   @font-face {
     font-family: roboto slab;
@@ -19,17 +23,24 @@
     --color3: rgb(66, 66, 66);
     --color4: #555041;
     color: white;
-    background-color: rgb(114, 114, 114);
+    --cont: rgba(0, 0, 0, 0.352);
+    --text:white;
+    --header:rgba(0, 0, 0, 0.614);
+    --bckurl: url('../Imgs/bck/graylong.jpg');
     
   }
   
 /* Body styles */
 body {
     font-family: 'roboto slab', sans-serif;
+    background-image: var(--bckurl) ;
+    background-size: cover;
     
     margin: 0;
     padding: 0;
+    
 }
+
 
 
 /*file type menu styles*/
@@ -74,11 +85,40 @@ body {
 .types li:hover{
     background-color: var(--color1);
 }
+
+/* Search bar styles */
+#search {
+    margin: 20px 60px;
+    padding: 20px;
+    background-color: var(--cont);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search h2 {
+    margin-top: 0;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #838383a5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+#search-input::placeholder {
+    color: var(--color5);
+}
+
+
 /* File list styles */
 #file-list {
-    margin: 10px 20px 0px;
+    margin: 10px 60px 0px;
     padding: 20px;
-    background-color: var(--white);
+    background-color: var(--cont);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -90,9 +130,9 @@ body {
 
 /* Add file form styles */
 #add-file {
-    margin: 5px 20px 20px;
+    margin: 5px 60px 20px;
     padding: 20px;
-    background-color: var(--white);
+    background-color: var(--cont);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -111,8 +151,20 @@ body {
 #add-file select {
     margin-bottom: 10px;
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #838383a5;
+    border-radius: 10px;
+    height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#add-file input[type="date"]::-webkit-calendar-picker-indicator{
+    
+    width: 100px;
+    height: 30px;
+    padding-inline: auto;
+}
+#add-file input[type="date"]::-webkit-calendar-picker-indicator:hover{
+    
+    cursor: pointer;
 }
 
 #add-file button {
@@ -156,6 +208,10 @@ td a {
 
 td a:hover {
     text-decoration: underline;
+}
+tr:hover{
+    background-color:#4356bf62 ;
+    
 }
 
 /* Form styles */

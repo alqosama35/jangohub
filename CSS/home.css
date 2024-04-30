@@ -198,7 +198,7 @@ header {
 .use{
     height: 400px;
     background-image: url(../Imgs/bck/yellow.jpg);
-    background-size: contain;
+    background-size: cover;
     margin: 20px 0;
 }
 .use .container{
