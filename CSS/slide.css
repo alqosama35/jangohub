@@ -28,7 +28,8 @@ a{
 
     width: 200px;
     height: 100%;
-    background-color: #0080ff;
+    /* background-color: #150054; */
+    background-image: linear-gradient( #0F2027, #203A43, #2C5364);
     color: aliceblue;
     /* border-radius: 5px; */
     margin: 0;
