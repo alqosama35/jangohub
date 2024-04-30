@@ -6,21 +6,28 @@
     --box-shadow:  rgb(158, 151, 151); 
     --b--: rgb(0,0,0);
 }
+
 P{
     color: var(--b--);
 }
 .containerb{ 
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.299);
+    background-color: rgba(255, 255, 255, 0.347);
     
     }
 
 body{
     background-image: url(../Imgs/AS.jpg);
     background-size: cover;
+    height: 996.67px;
 }
-
+html{
+    height: 1012.67px !important;
+  }
+  .containerb{
+    height: 996.67px;
+  }
 h1{
     width: 400px;
     height: 60px;
@@ -34,7 +41,7 @@ h1{
     transition-duration: 0.5s;
     letter-spacing: 2px;
     background-color: rgba(0, 0, 0, 0.836);
-            }
+    }
 h2{
     width: 250px;
     height: 35px;

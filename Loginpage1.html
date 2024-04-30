@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/New_login.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/New_login.css">
+</head>
+<body>
     <img class="backimg" src="imgs/back6.jpg">
     <form id="form">
-      <div class="signin">
-        <h3 class="str1">Sign in</h3>
-        <div class="icon">
-          <a href="https://github.com/">
-            <img src="imgs/github.png" />
-          </a>
-          <a href="https://google.com">
-            <img src="imgs/google.png" />
-          </a>
-          <a href="https://www.facebook.com/">
-            <img src="imgs/face.png" />
-          </a>
+        <div class="signin">
+            <h3 class="str1">Sign in</h3>
+            <div class="icon">
+                <a href="https://github.com/">
+                    <img src="imgs/github.png" alt="GitHub">
+                </a>
+                <a href="https://google.com">
+                    <img src="imgs/google.png" alt="Google">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="imgs/face.png" alt="Facebook">
+                </a>
+            </div>
+
+            <input type="text" id="email" placeholder="Email">
+            <div id="error"></div>
+            <input type="password" id="password" placeholder="Password">
+            <div id="errorp"></div>
+            <input type="submit" value="SIGN IN" id="submit" class="submit">
         </div>
 
-        <input type="text" id="username" placeholder="username" />
-        <div id="error"></div>
-        <input type="password" id="password" placeholder="password" />
-        <div id="errorp"></div>
-        <input type="submit" value="SIGN IN" id="submit" class="submit" />
-      </div>
-
-      <div class="signup">
-        <h2>Create,<br> Account<span>!</span></h2>
-        <p>Sign up if you don't have an account</p>
-        <a href="Loginpage2.html">
-        <!-- <p>SIGN UP</p>  -->
-        SIGN UP 
-        </a>
-      </div>
+        <div class="signup">
+            <h2>Create an Account</h2>
+            <p>Sign up if you don't have an account</p>
+            <a href="Loginpage2.html">SIGN UP</a>
+        </div>
     </form>
 
     <script>
-      var error = document.getElementById("error");
-      var form = document.getElementById("form");
-      var username = document.getElementById("username");
-      var password = document.getElementById("password");
+        var error = document.getElementById("error");
+        var errorp = document.getElementById("errorp");
+        var form = document.getElementById("form");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
 
-      form.addEventListener("submit", function (event) {
-        let Error = [];
-        let Errpass = [];
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        if (username.value === "" || username.value == null)
-          Error.push(" This Filed Is Required");
-        else {
-          var x = false;
-          for (let i = 0; i < username.value.length; i++) {
-            if (username.value[i] === "@") {
-              x = true;
-              break;
+            let Error = [];
+            let Errpass = [];
+
+            if (email.value === "" || email.value == null)
+                Error.push("Email is required");
+            else {
+                var x = false;
+                for (let i = 0; i < email.value.length; i++) {
+                    if (email.value[i] === "@") {
+                        x = true;
+                        break;
+                    }
+                }
+                if (!x) Error.push("Please include an '@' in the email address");
             }
-          }
-          if (!x) Error.push("Please include an '@' in the email address");
-        }
 
-        if (Error.length > 0) {
-          event.preventDefault();
-          error.innerHTML = Error.join("<br />");
-        }
+            if (Error.length > 0) {
+                error.innerHTML = Error.join("<br>");
+                return;
+            }
 
-        if (password.value === "" || password.value == null)
-          Errpass.push(" Password Is Required");
-        if (Errpass.length > 0) {
-          event.preventDefault();
-          errorp.innerHTML = Errpass.join("<br />");
-        }
-      });
+            if (password.value === "" || password.value == null)
+                Errpass.push("Password is required");
+
+            if (Errpass.length > 0) {
+                errorp.innerHTML = Errpass.join("<br>");
+                return;
+            }
+
+            // Attempt to find the user in local storage
+            const formData = JSON.parse(localStorage.getItem("formData"));
+            if (formData && formData.email === email.value && formData.password === password.value) {
+                
+                window.location.href = "home.html";
+                // Redirect to another page or perform further actions
+            } else {
+                error.innerHTML = "User not found or incorrect password";
+            }
+        });
     </script>
-  </body>
+</body>
 </html>

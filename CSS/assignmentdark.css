@@ -6,6 +6,9 @@
     --box-shadow:  rgb(158, 151, 151); 
     --b--: rgb(255, 255, 255);
 }
+html{
+  height: 1012.67px !important;
+}
 .containerb{ 
     height: 100%;
     width: 100%;
@@ -15,6 +18,7 @@
 body{
     background-image: url(../Imgs/AS.jpg);
     background-size: cover;
+    height: 996.67px;
 }
 P{
     color: var(--b--);
