@@ -1,0 +1,70 @@
+:root {
+    --color1:#292722 ;
+    --color2:#000000 ;
+    --color3:rgba(255, 255, 255, 0.914) ;
+    --color4:rgb(255, 255, 255) ;
+    --color5: #aa93 ;
+    --color6:#ffffff ;
+    --color7:#ffffff ;
+    --color8: #007bff ;
+    --color9:#fff ;
+    --color10:#3b4959 ;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color1);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--color2);
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--color3);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color4);
+}
+
+#news-list {
+    list-style: none;
+    padding: 0;
+}
+
+#news-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:var(--color5);;
+    border-radius: 5px;
+    color: var(--color6);
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color7);
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--color8);
+    color: var(--color9);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color10);
+}
