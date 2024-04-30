@@ -1,138 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="CSS/LoginStyles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <a class="login" href="Loginpage1.html">
-      Login
-      </a>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#about">About </a>
-        </li>
-      </ul>
-      <div class="logo">
-        <p>Jungo</p>
-      </div>
-      
-    </header>
-    <!-- <img class="mountains" src="Imgs/mountains.jpg">
-    <div class="imgdiv">
-
-    </div> -->
-    <form action="">
-      <div class="logform" style="height: 580px;">
-
-
-        <input type="text" placeholder="frist name" id="fname">
-        <input type="text" placeholder="second name" id="lname">
-        <input type="email" placeholder="email" 
-        name="email" id="email" required>
-        <input type="number" placeholder="phone" 
-        name="username" required>
-        <input tupe="password" placeholder="password"  name="username" required>
-        <div class="pos">
-  
-          <input type="radio" id="user" name="position" value="user"> 
-          <label for="user"><p>User</p></label>
-          
-          <input type="radio" id="admin" name="position" value="admin"> 
-          <label for="admin"><p>Admin</p></label>
-          
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="CSS/New_signup.css">
+</head>
+<body>
+    <img class="backimg" src="imgs/back6.jpg">
+    <form id="form">
+        <div class="signup">
+            <h2>
+             Have an Account<span>?</span>
+            </h2>
+            <p>Sign in with your account</p>
+            <a href="Loginpage1.html">SIGN IN</a>
         </div>
-        <input class="submet" type="submit" value="create account"> 
-      </div>
+           
+        <div class="signin">
+            <h3 class="str1">Sign up</h3>
+            <input type="text" id="username" placeholder="Email" />
+            <div id="error"></div>
+            <input type="password" id="password" placeholder="Password" />
+            <div id="errorp"></div>
+
+            <input id="idname" type="text" placeholder="Name">
+            <div id="errorname"></div>
+
+            <input type="tel" id="idtel" placeholder="Phone Number">
+            <div id="num"></div>
+            <input type="submit" value="SIGN UP" id="submit" class="submit" />
+        </div>
     </form>
-    <div class="logform" style="height: 580px;">
 
+    <script>
+        var error = document.getElementById("error");
+        var form = document.getElementById("form");
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var name = document.getElementById("idname");
+        var number = document.getElementById("idtel");
 
-      <input type="text" placeholder="frist name">
-      <input type="text" placeholder="second name">
-      <input type="email" placeholder="email" 
-      name="username" required>
-      <input type="number" placeholder="phone" 
-      name="username" required>
-      <input tupe="password" placeholder="password"  name="username" required>
-      <div class="pos">
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        <input type="radio" id="user" name="position" value="user"> 
-        <label for="user"><p>User</p></label>
-        
-        <input type="radio" id="admin" name="position" value="admin"> 
-        <label for="admin"><p>Admin</p></label>
-        
-      </div>
-      <input class="submet" type="submit" value="create account"> 
-    </div>
+            let Error = [];
+            let Errpass = [];
+            let Errn = [];
+            let Errtel = [];
 
+            if (username.value === "" || username.value == null)
+                Error.push("Email is required");
+            else {
+                var x = false;
+                for (let i = 0; i < username.value.length; i++) {
+                    if (username.value[i] === "@") {
+                        x = true;
+                        break;
+                    }
+                }
+                if (!x)
+                    Error.push("Please include an '@' in the email address");
+            }
 
+            if (Error.length > 0) {
+                error.innerHTML = Error.join("<br />");
+                return;
+            }
 
+            if (password.value.trim() === "" || password.value.trim() == null)
+                Errpass.push("Password is required");
+            if (Errpass.length > 0) {
+                errorp.innerHTML = Errpass.join("<br />");
+                return;
+            }
 
+            if (number.value === "" || number.value == null)
+                Errtel.push("Phone Number is required");
+            if (number.value.length > 11)
+                Errtel.push("Phone number is not valid");
 
+            if (Errtel.length > 0) {
+                num.innerHTML = Errtel.join("<br />");
+                return;
+            }
 
+            // Storing form data in local storage
+            const formData = {
+                email: username.value,
+                password: password.value,
+                name: name.value,
+                tel: number.value
+            };
 
-    <div class="flag"  id="about">
-      
-    </div>
-    <div class="about">
-      <p class="aboutus">
-        Computer Science and Artificial 
-        Intelligence students of Helwan
-         University would hugely benefit
-          from this website as it allows
-           them to upgrade their college 
-           life with educational access to 
-           all of their subjects. This is 
-           where the students can select 
-           subjects they want to study,
-            and conveniently
-         find and access them with the help 
-         of an easy GUI materials needed
-      </p>
-      
-     
-
-    </div>
-    <div class="contact" id="contact">
-      <img src="Imgs/image3.webp">
-      <ul>
-        <li class="face">
-          <a href="#">
-            <span>  Facebook </span> 
-          </a>
-        </li>
-        <li class="watsapp">
-          
-          <a class="wpp" href="#">
-          Whatsapp
-
-           <img src="Imgs/apps.8985.13655054093851568.1c669dab-3716-40f6-9b59-de7483397c3a.png">
-          </a>
-          <h1 style="margin-left: 150px;
-          font-size: 60px; color: blue;
-          font-family: Pacifico, cursive;
-          letter-spacing: 2px; word-spacing: -9px;
-          text-shadow: 3px 2px 1px  red;"> Jun Go</h1>
-        </li>
-      </ul>
-      <!-- <img src="imagesPR/face.png"> -->
-      
-    </div>
-
-
-
-  </body>
+            localStorage.setItem("formData", JSON.stringify(formData));
+        });
+    </script>
+</body>
 </html>
-

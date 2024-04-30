@@ -1,0 +1,108 @@
+:root{
+    --bg1-color:rgba(255, 255, 255, 0.863);
+    --bg2-color: #000000c1;
+    --text1-color:rgb(0, 0, 0);
+    --text2-color: rgb(255, 255, 255);
+    --box-shadow:  rgb(158, 151, 151); 
+    --b--: rgb(255, 255, 255);
+}
+html{
+  height: 1012.67px !important;
+}
+.containerb{ 
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.491);
+  }
+
+body{
+    background-image: url(../Imgs/AS.jpg);
+    background-size: cover;
+    height: 996.67px;
+}
+P{
+    color: var(--b--);
+}
+
+h1{
+    width: 400px;
+    height: 60px;
+    margin:auto ;
+    text-align: center;
+    color: var(--bg1-color);
+    background-color: var(--text1-color);opacity: 0.8;
+    box-shadow: 10px 10px 10px 0px rgb(159, 143, 143);
+  }
+  h1:hover{
+    transition-duration: 0.5s;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.836);
+            }
+h2{
+    width: 250px;
+    height: 35px;
+    margin:48px 0px 0px 15px;
+    text-align: center;
+    color: var(--text2-color);
+    background-color: var(--bg2-color); opacity: 0.9;
+    box-shadow: 10px 10px 10px 0px rgb(158, 151, 151);
+   }
+ #cap{
+    width: 320px;
+    height: 30px;
+    text-align: center;
+    color: var(--text2-color);
+    background-color: var(--bg2-color); opacity: 0.9;
+    box-shadow: 10px 10px 10px 0px rgb(158, 151, 151); 
+    position: absolute;
+    padding: 5px;
+    top: 85%;left: 475px;
+     }
+#ASS{
+     margin:15px 0px 3px 15px;
+    }
+#it{
+    position: absolute;bottom: 270px;left: 423.5px;
+   }
+#net{
+    position: absolute;bottom: 80px;left: 423.5px;
+    }
+#st{
+    position: absolute;bottom: 270px;left: 825.5px;
+   }
+#at{
+    position: absolute;bottom: 80px;left: 825.5px;
+   }
+#ASS{
+     display: inline-block;    
+    }
+a{
+   color: var(--b--);
+   text-decoration: none;
+   padding: 4px;
+  border: 2px solid black ;
+  border-radius: 8px;
+  background-color:  var(--text1-color);
+  opacity:0.836;
+ }
+#c{
+   line-height: 1.2px;
+  }
+  video{
+    width: 50%;
+    height: 370px;
+     position: absolute;
+     left:25%;
+    top: 540px;
+    border: 2px solid var(--text1-color);
+  }
+  #sticky{
+    width: 120px;
+    height: 30px;
+    color: white; 
+    background-color: black;opacity: 0.9;
+    border: 2px solid black;
+    border-radius: 12px;
+    
+   
+    }

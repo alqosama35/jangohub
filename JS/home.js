@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     loginbtn.addEventListener('click', function () {
         // Perform your action here
-        localStorage.setItem('signedin', 'true');
+        
         
 
 
