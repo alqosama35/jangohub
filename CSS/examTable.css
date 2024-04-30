@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fixheader{
+    height: 50px;
+}
+.exam {
+   
+    height: 200;
+}
+.exam .container{
+    
+    max-width: 800px;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.exam h1 {
+    text-align: center;
+    color: #333;
+    
+}
+
+.exam table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.exam th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.exam th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.exam tr:hover {
+    background-color: #f9f9f9;
+}
