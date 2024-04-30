@@ -117,4 +117,36 @@ themebtn.addEventListener('click', function () {
 
 });
   
+// Get the input field
+var dateInput = document.getElementById("file-date");
+
+// Add a click event listener to the input field
+dateInput.addEventListener("click", function() {
+  // Trigger the click event of the input field
+  this.click();
+});
+
+// Add event listener for input changes in the search bar
+document.getElementById('search-input').addEventListener('input', function() {
+    var filter = this.value.toUpperCase(); // Get the value of the search input and convert it to uppercase
+    var tableRows = document.querySelector('table').getElementsByTagName('tr'); // Get all table rows
+    
+    // Loop through all table rows
+    for (var i = 0; i < tableRows.length; i++) {
+        var fileNameColumn = tableRows[i].getElementsByTagName('td')[0]; // Get the first column (file name column) of the current row
+        
+        // If the file name column exists
+        if (fileNameColumn) {
+            var fileName = fileNameColumn.textContent || fileNameColumn.innerText; // Get the text content of the file name column
+            
+            // Check if the file name contains the search filter
+            if (fileName.toUpperCase().indexOf(filter) > -1) {
+                tableRows[i].style.display = ''; // If the file name matches the search filter, display the row
+            } else {
+                tableRows[i].style.display = 'none'; // If the file name does not match the search filter, hide the row
+            }
+        }
+    }
+});
+
 });

@@ -1,0 +1,200 @@
+:root{
+    --color1:rgb(255, 255, 255);
+    --color2: green ;
+    --color3:rgb(0, 0, 0);
+    --color4:rgb(159, 143, 143) ;
+    --color5:  rgba(103, 103, 238); 
+    --color6: rgb(0, 0, 0);
+    --color7:rgb(0, 0, 0);
+    --color8:red;
+    }
+    .containerb{ 
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.491);
+      }
+    body{
+        background-image: url('../Imgs/social.jpg');
+        background-size: cover; 
+      }
+      
+    
+      a{
+        text-decoration: none;
+        color: var(--color1);
+       }
+
+h1{
+    width: 620px;
+    height: 60px;
+    margin:auto ;
+    text-align: center;
+    color: var(--color1);
+    background-color: var(--color6);
+    opacity:0.836;
+    box-shadow: 10px 10px 10px 0px var(--color 4);
+    }
+#whats,#telegram,#face,#you{
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    color: var(--color1);
+    background-color: var(--color2);
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    margin:20px 0px 3px 120px;
+    padding-top: 10px;
+      }
+#whats:hover{
+    transition-duration: 0.5s;
+    letter-spacing: 2px;
+    background-color: black ;
+    opacity: 0.836;
+            }
+
+ #telegram{
+    background-color:var(--color5);
+    opacity: 0.872;
+    position: absolute;
+    bottom: 400px;
+    right: 120px;
+         }
+    
+    #telegram:hover{
+        transition-duration: 0.5s;
+        letter-spacing: 2px;
+        background-color:rgba(0, 0, 0, 0.836);
+                    }
+#face{
+    background-color:var(--color7);
+    position: absolute;
+    bottom: 270px;
+    right: 120px;
+     }
+    
+    #face:hover{
+        transition-duration: 0.5s;
+        letter-spacing: 2px;
+        background-color: rgba(0, 0, 0, 0.836);
+               }
+#you{
+    background-color: var(--color8);
+    position: absolute;
+    bottom: 130px;
+    right: 120px;
+    }
+    
+    #you:hover{
+        transition-duration: 0.5s;
+        letter-spacing: 2px;
+        background-color: rgba(0, 0, 0, 0.836);
+              }
+
+h1:hover{
+    transition-duration: 0.5s;
+    letter-spacing: 2px;
+background-color: rgb(122, 122, 184);
+        }
+#it,#PL,#discrete{ 
+    width:160px;
+    height: 25px;
+    border: 4px solid var(--color2);
+    border-radius: 12px;
+    text-align: center;
+    margin:20px 0px 3px 110px;
+    padding-top: 5px;
+                  }
+#math2,#electronics,#statistics2{ 
+    width:160px;
+    height: 25px;
+    border: 4px solid var(--color2);
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0px 3px 300px;
+    padding-top: 5px;
+                               }
+#tele,#teleg{
+    display: inline-block;
+    width:160px;
+    height: 25px;
+    border: 4px solid var(--color5);
+    opacity:0.872;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+            }
+#tele{
+    position: absolute;
+    bottom: 345px;
+    left: 775px;
+
+}
+#teleg{
+    position: absolute;
+    bottom: 345px;
+    left: 965px;
+}
+
+
+
+#facebook{
+    display: inline-block;
+    width:160px;
+    height: 25px;
+    border: 4px solid blue;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 210px;
+    left: 775px;
+        }
+#youtube {
+    display: inline-block;
+    width:160px;
+    height: 25px;
+    border: 4px solid red;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 70px;
+    left: 775px;
+          }
+#icon{
+    color: var(--color6);
+    position: absolute;
+    left: 170px;
+    top: 15px;
+}
+video{
+    width: 50%;
+    height: 370px;
+     position: absolute;
+     left:25%;
+    top: 670px;
+    border: 2px solid var(--text1-color);
+  }
+  #cap{
+    width: 380px;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--color1);
+    background-color:var(--color3);opacity: 0.9;
+    box-shadow: 10px 10px 10px 0px blueviolet; 
+    position: absolute;
+    margin-top: 8%;
+    top: 90%;left: 445px;
+     }
+     #theme{
+    width: 120px;
+    height: 30px;
+    color: white; 
+    background-color: black;opacity: 0.9;
+    border: 2px solid black;
+    border-radius: 12px;
+    }
